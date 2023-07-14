@@ -1,0 +1,55 @@
+Scenario: Testing a WiFi device (including encryption and WiFi protocols)
+
+Test Case 1: Checking WiFi device availability and operability
+
+Test Scenario: Verify that the WiFi device is recognized by the OS and is functioning properly.
+
+- Setup: The WiFi device should be installed properly in the system and the system should be operational.
+
+- Tools: Operating System’s in-built network device listing features, WiFi scanning tools (for example, "iwlist" in Linux).
+
+- Test Steps:
+    1. List the network devices recognized by the operating system.
+    2. Confirm that the WiFi device appears in the list.
+    3. Use the WiFi scanning tool to list available networks.
+    4. Confirm that the WiFi device can detect at least one network.
+
+- Pass/Fail Criteria:
+    1. If the WiFi device is listed in the network devices list, pass the first test.
+    2. If the WiFi scanning tool can detect at least one network, pass the second test.
+
+- Teardown: No special teardown required for this test.
+
+Test Case 2: Testing WiFi device connection capabilities with encryption
+
+Test Scenario: Verify that the WiFi device can connect to an encrypted network.
+
+- Setup: An encrypted WiFi network should be set up and accessible. The SSID and password for the network should be known.
+
+- Tools: Network management utilities (for example, "nmcli" in Linux).
+
+- Test Steps:
+    1. Use the network management utility to connect to the WiFi network.
+    2. Confirm that the WiFi device is connected to the network.
+
+- Pass/Fail Criteria:
+    1. If the WiFi device can connect to the encrypted network, pass the test.
+
+- Teardown: Disconnect from the WiFi network.
+
+Test Case 3: Testing WiFi device compatibility with different WiFi protocols
+
+Test Scenario: Verify that the WiFi device supports different WiFi protocols (802.11 a/b/g/n/ac/ax).
+
+- Setup: Multiple WiFi networks should be set up, each supporting different WiFi protocols. 
+
+- Tools: Network management utilities (for example, "nmcli" in Linux).
+
+- Test Steps:
+    1. Use the network management utility to connect to each of the WiFi networks.
+    2. Confirm that the WiFi device can connect to the network.
+
+- Pass/Fail Criteria:
+    1. If the WiFi device can connect to the network using a particular protocol, pass the test for that protocol.
+
+- Teardown: Disconnect from the WiFi network. 
